@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+#import "TrackModel.h"
+
 @interface TracksList_SearchResponse : NSObject
+
+@property (nonatomic, strong, nullable) NSArray<TrackModel *> *resultsArray;
+
+- (instancetype _Nullable)initWithDictionary:(NSDictionary * _Nonnull)dict;
 
 @end

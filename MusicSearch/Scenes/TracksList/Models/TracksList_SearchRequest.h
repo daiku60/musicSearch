@@ -10,6 +10,8 @@
 
 @interface TracksList_SearchRequest : NSObject
 
-@property (nonatomic, strong) NSString *requestTerm;
+@property (nonatomic, strong) NSString * _Nonnull requestTerm;
+
+- (instancetype _Nullable)initWithTerm:(NSString * _Nonnull)requestTerm;
 
 @end

@@ -10,4 +10,12 @@
 
 @implementation TracksList_SearchRequest
 
+- (instancetype _Nullable)initWithTerm:(NSString * _Nonnull)requestTerm {
+    if ((self = [super init])) {
+        self.requestTerm = requestTerm;
+    }
+    
+    return self;
+}
+
 @end
