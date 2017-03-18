@@ -94,9 +94,21 @@
 
 #pragma mark - Input Methods
 
-- (void)displaySearchResults:(TracksList_SearchViewModel *)viewModel {
+- (void)displaySearchResults:(TracksList_SearchViewModel * _Nonnull)viewModel {
     self.viewModel = viewModel;
     [self.collectionView reloadData];
+}
+
+- (void)displaySearchError:(NSError * _Nonnull)error {
+    //TODO: display error
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:[error.userInfo objectForKey:@"message"] preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"Retry" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        // TODO: retry search operation
+    }];
+    
+    [alertController addAction:action];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 

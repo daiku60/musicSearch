@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: 7c3a95cd3d1e25ba860ca6d46646223dd3f45e90
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+
+PODFILE CHECKSUM: 80f40b108e8cddf2237aa0a71f6609557b8739f2
 
 COCOAPODS: 1.2.0

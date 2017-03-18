@@ -14,7 +14,7 @@
 - (void)presentSearchWithResponse:(TracksList_SearchResponse * _Nonnull)response {
     TracksList_SearchViewModel *viewModel = [self viewModelFromResponse:response];
     if (viewModel == nil) {
-        NSError *error = [[NSError alloc] initWithDomain:@"TracksList.presenter" code:1001 userInfo:@{ @"localizedDescription" : NSLocalizedString(@"Error during parsing", @"") }];
+        NSError *error = [[NSError alloc] initWithDomain:@"TracksList.presenter" code:1001 userInfo:@{ @"message" : NSLocalizedString(@"Error during parsing", @"") }];
         [self.output displaySearchError:error];
     } else {
         [self.output displaySearchResults:viewModel];

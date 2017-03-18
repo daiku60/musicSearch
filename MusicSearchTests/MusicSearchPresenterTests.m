@@ -10,7 +10,6 @@
 #import "TracksListPresenter.h"
 #import "TracksListModels.h"
 
-
 #pragma mark - Spy
 
 @interface SpyPresenterOutput : NSObject <TracksListPresenterOutput>
