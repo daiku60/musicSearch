@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "TrackModel.h"
+@class TrackModel;
 
 @interface TracksList_SearchResponse : NSObject
 

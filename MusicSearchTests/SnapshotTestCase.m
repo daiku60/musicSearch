@@ -10,6 +10,19 @@
 
 @implementation SnapshotTestCase
 
+- (UIWindow *)currentWindow {
+    return [UIApplication sharedApplication].keyWindow;
+}
+
+- (UIViewController *)rootViewController {
+    return self.currentWindow.rootViewController;
+}
+
+- (void)setRootViewController:(UIViewController *)newRootViewController {
+    self.currentWindow.rootViewController = newRootViewController;
+    [self.currentWindow makeKeyAndVisible];
+}
+
 
 - (void)debugViewController:(UIViewController *)viewController {
     self.rootViewController = viewController;

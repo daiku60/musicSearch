@@ -7,6 +7,7 @@
 //
 
 #import "TracksListPresenter.h"
+#import "TrackModel.h"
 #import "TracksListModels.h"
 
 @implementation TracksListPresenter: NSObject
@@ -28,8 +29,14 @@
 }
 
 - (TracksList_SearchViewModel * _Nullable)viewModelFromResponse:(TracksList_SearchResponse * _Nonnull)response {
-    //TODO: actually implement this, given the JSON
-    return [[TracksList_SearchViewModel alloc] initWithTracks:[NSArray array]];
+    
+    NSMutableArray *mutableArray = [NSMutableArray array];
+    for (TrackModel *trackModel in response.resultsArray) {
+        TracksList_TrackViewModel *trackVM = [[TracksList_TrackViewModel alloc] initWithTrackId:trackModel.trackId andTrackTitle:trackModel.trackName andArtistName:trackModel.artistName];
+        [mutableArray addObject:trackVM];
+    }
+    
+    return [[TracksList_SearchViewModel alloc] initWithTracks:[mutableArray copy]];
 }
 
 @end

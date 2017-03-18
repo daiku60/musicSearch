@@ -8,6 +8,7 @@
 
 #import "TracksList_SearchResponse.h"
 #import "NSDictionary+SafeValue.h"
+#import "TrackModel.h"
 
 @implementation TracksList_SearchResponse
 

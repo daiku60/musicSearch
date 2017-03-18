@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class TracksListViewController;
+
 @interface TracksListConfigurator : NSObject
 
 + (instancetype)sharedInstance;
+- (void)configureWithViewController:(TracksListViewController *)viewController;
 
 @end

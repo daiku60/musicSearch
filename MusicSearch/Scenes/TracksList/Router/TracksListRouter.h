@@ -12,4 +12,6 @@
 
 @property (nonatomic, weak) UIViewController *viewController;
 
+- (void)navigateToTrackDetailWithId:(NSInteger)trackId;
+
 @end

@@ -30,5 +30,7 @@
 @property (nonatomic, strong) TracksListRouter * _Nullable router;
 @property (nonatomic, strong) id<TracksListViewControllerOutput> _Nonnull output;
 
+- (instancetype _Nonnull)initWithViewModel:(TracksList_SearchViewModel * _Nonnull)viewModel;
+
 @end
 

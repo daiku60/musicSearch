@@ -1,14 +1,14 @@
 //
-//  MusiciTunesFetcher.h
+//  FakeFetcher.h
 //  MusicSearch
 //
-//  Created by Jordi Serra i Font on 17/3/17.
+//  Created by Jordi Serra i Font on 18/3/17.
 //  Copyright © 2017 kudai. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "MusicFetcherType.h"
 
-@interface ITunesFetcher : NSObject <MusicFetcherType>
+@interface FakeFetcher : NSObject <MusicFetcherType>
 
 @end

@@ -29,6 +29,10 @@
 		67F2189D1E7B5E9400FB2AFF /* TracksList_SearchResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F2189C1E7B5E9400FB2AFF /* TracksList_SearchResponse.m */; };
 		67F218A01E7B5EB000FB2AFF /* TracksList_SearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F2189F1E7B5EB000FB2AFF /* TracksList_SearchViewModel.m */; };
 		67F833A11E7D711E00ABB159 /* SnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F833A01E7D711E00ABB159 /* SnapshotTestCase.m */; };
+		67F833A31E7DA55E00ABB159 /* SnapshotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F833A21E7DA55E00ABB159 /* SnapshotTests.m */; };
+		67F833A81E7DE69100ABB159 /* FakeFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F833A71E7DE69100ABB159 /* FakeFetcher.m */; };
+		67F833AF1E7DF1C000ABB159 /* UIView+Constraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F833AE1E7DF1C000ABB159 /* UIView+Constraints.m */; };
+		67F833B51E7DFCF200ABB159 /* EmptyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F833B41E7DFCF200ABB159 /* EmptyCell.m */; };
 		B3BC17B510086EA77985B4AC /* Pods_MusicSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34AF85A289362AC435C18B0E /* Pods_MusicSearchTests.framework */; };
 		EB9493890352836904FCF720 /* Pods_MusicSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717341163F75D1C615DDAA39 /* Pods_MusicSearch.framework */; };
 /* End PBXBuildFile section */
@@ -87,6 +91,14 @@
 		67F2189F1E7B5EB000FB2AFF /* TracksList_SearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TracksList_SearchViewModel.m; path = Scenes/TracksList/Models/TracksList_SearchViewModel.m; sourceTree = "<group>"; };
 		67F8339F1E7D711E00ABB159 /* SnapshotTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnapshotTestCase.h; sourceTree = "<group>"; };
 		67F833A01E7D711E00ABB159 /* SnapshotTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnapshotTestCase.m; sourceTree = "<group>"; };
+		67F833A21E7DA55E00ABB159 /* SnapshotTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnapshotTests.m; sourceTree = "<group>"; };
+		67F833A61E7DE69100ABB159 /* FakeFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FakeFetcher.h; path = API/FakeFetcher.h; sourceTree = "<group>"; };
+		67F833A71E7DE69100ABB159 /* FakeFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FakeFetcher.m; path = API/FakeFetcher.m; sourceTree = "<group>"; };
+		67F833A91E7DE6B400ABB159 /* MusicFetcherType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MusicFetcherType.h; path = API/MusicFetcherType.h; sourceTree = "<group>"; };
+		67F833AD1E7DF1C000ABB159 /* UIView+Constraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Constraints.h"; path = "Categories/UIView+Constraints.h"; sourceTree = "<group>"; };
+		67F833AE1E7DF1C000ABB159 /* UIView+Constraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Constraints.m"; path = "Categories/UIView+Constraints.m"; sourceTree = "<group>"; };
+		67F833B31E7DFCF200ABB159 /* EmptyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmptyCell.h; path = Scenes/TracksList/ViewController/Components/EmptyCell.h; sourceTree = "<group>"; };
+		67F833B41E7DFCF200ABB159 /* EmptyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmptyCell.m; path = Scenes/TracksList/ViewController/Components/EmptyCell.m; sourceTree = "<group>"; };
 		717341163F75D1C615DDAA39 /* Pods_MusicSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D37C5E0D317B48B662F05DA /* Pods-MusicSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicSearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicSearchTests/Pods-MusicSearchTests.release.xcconfig"; sourceTree = "<group>"; };
 		C18CE488D17D16584D06A029 /* Pods-MusicSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicSearch/Pods-MusicSearch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +142,9 @@
 			children = (
 				679F5FBD1E7C60BE0048516D /* ITunesFetcher.h */,
 				679F5FBE1E7C60BE0048516D /* ITunesFetcher.m */,
+				67F833A61E7DE69100ABB159 /* FakeFetcher.h */,
+				67F833A71E7DE69100ABB159 /* FakeFetcher.m */,
+				67F833A91E7DE6B400ABB159 /* MusicFetcherType.h */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -164,6 +179,8 @@
 			children = (
 				679F5FCE1E7C844C0048516D /* NSDictionary+SafeValue.h */,
 				679F5FCF1E7C844C0048516D /* NSDictionary+SafeValue.m */,
+				67F833AD1E7DF1C000ABB159 /* UIView+Constraints.h */,
+				67F833AE1E7DF1C000ABB159 /* UIView+Constraints.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -220,6 +237,7 @@
 				679F5FC31E7C77E20048516D /* JSON */,
 				679F5FC11E7C70AD0048516D /* MusicSearchPresenterTests.m */,
 				67D05B301E7B47E300153870 /* MusicSearchInteractorTests.m */,
+				67F833A21E7DA55E00ABB159 /* SnapshotTests.m */,
 				67D05B321E7B47E300153870 /* Info.plist */,
 				67F8339F1E7D711E00ABB159 /* SnapshotTestCase.h */,
 				67F833A01E7D711E00ABB159 /* SnapshotTestCase.m */,
@@ -268,6 +286,8 @@
 			children = (
 				67F218941E7B5C8C00FB2AFF /* TrackCell.h */,
 				67F218951E7B5C8C00FB2AFF /* TrackCell.m */,
+				67F833B31E7DFCF200ABB159 /* EmptyCell.h */,
+				67F833B41E7DFCF200ABB159 /* EmptyCell.m */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -532,6 +552,7 @@
 				67F218871E7B557800FB2AFF /* TracksListInteractor.m in Sources */,
 				679F5FBF1E7C60BE0048516D /* ITunesFetcher.m in Sources */,
 				67F2188A1E7B564400FB2AFF /* TracksListPresenter.m in Sources */,
+				67F833A81E7DE69100ABB159 /* FakeFetcher.m in Sources */,
 				67F2189A1E7B5E7800FB2AFF /* TracksList_SearchRequest.m in Sources */,
 				67F2188D1E7B56E800FB2AFF /* TracksListConfigurator.m in Sources */,
 				67F218A01E7B5EB000FB2AFF /* TracksList_SearchViewModel.m in Sources */,
@@ -539,9 +560,11 @@
 				679F5FCB1E7C7FE70048516D /* TrackModel.m in Sources */,
 				67D05B1E1E7B47E300153870 /* TracksListViewController.m in Sources */,
 				67F2189D1E7B5E9400FB2AFF /* TracksList_SearchResponse.m in Sources */,
+				67F833AF1E7DF1C000ABB159 /* UIView+Constraints.m in Sources */,
 				67D05B1B1E7B47E300153870 /* AppDelegate.m in Sources */,
 				679F5FD01E7C844C0048516D /* NSDictionary+SafeValue.m in Sources */,
 				67F218931E7B570800FB2AFF /* TracksListRouter.m in Sources */,
+				67F833B51E7DFCF200ABB159 /* EmptyCell.m in Sources */,
 				67D05B181E7B47E300153870 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,6 +574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				679F5FC21E7C70AD0048516D /* MusicSearchPresenterTests.m in Sources */,
+				67F833A31E7DA55E00ABB159 /* SnapshotTests.m in Sources */,
 				67D05B311E7B47E300153870 /* MusicSearchInteractorTests.m in Sources */,
 				67F833A11E7D711E00ABB159 /* SnapshotTestCase.m in Sources */,
 			);
@@ -626,7 +650,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -667,7 +691,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

@@ -13,8 +13,8 @@
 
 @interface SnapshotTestCase : FBSnapshotTestCase
 
-@property (nonatomic, strong) UIWindow *window;
-@property (nonatomic, strong) UIViewController *rootViewController;
+@property (nonatomic, strong, readonly, getter=currentWindow) UIWindow *window;
+@property (nonatomic, strong, getter=rootViewController, setter=setRootViewController:) UIViewController *rootViewController;
 
 - (void)debugViewController:(UIViewController *)viewController;
 - (void)presentViewController:(UIViewController *)viewController;

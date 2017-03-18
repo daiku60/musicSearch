@@ -8,17 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface TracksList_TrackViewModel : NSObject
 
-@property(nonatomic, strong) NSString *trackTitle;
+@property(nonatomic) NSInteger trackId;
+@property(nonatomic, strong, nonnull) NSString *trackTitle;
+@property(nonatomic, strong, nonnull) NSString *artistName;
+
+- (instancetype _Nullable)initWithTrackId:(NSInteger)trackId andTrackTitle:(NSString * _Nonnull)trackTitle andArtistName:(NSString * _Nonnull)artistName;
 
 @end
 
 @interface TracksList_SearchViewModel : NSObject <NSCopying>
 
-@property (nonatomic, strong) NSArray<TracksList_TrackViewModel *> *tracksArray;
+@property (nonatomic, strong, nonnull) NSArray<TracksList_TrackViewModel * > *tracksArray;
 
-- (instancetype)initWithTracks:(NSArray<TracksList_TrackViewModel *> *)tracksArray;
+- (instancetype _Nullable)initWithTracks:(NSArray<TracksList_TrackViewModel * > * _Nonnull)tracksArray;
 
 @end

@@ -10,4 +10,8 @@
 
 @implementation TracksListRouter
 
+- (void)navigateToTrackDetailWithId:(NSInteger)trackId {
+    //TODO implement this
+}
+
 @end

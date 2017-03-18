@@ -10,6 +10,15 @@
 
 @implementation TracksList_TrackViewModel
 
+- (instancetype _Nullable)initWithTrackId:(NSInteger)trackId andTrackTitle:(NSString *)trackTitle andArtistName:(NSString *)artistName {
+    if ((self = [super init])) {
+        self.trackTitle = trackTitle;
+        self.artistName = artistName;
+    }
+    
+    return self;
+}
+
 - (id)copyWithZone:(nullable NSZone *)zone {
     TracksList_TrackViewModel *viewModel = [[TracksList_TrackViewModel alloc] init];
     viewModel.trackTitle = self.trackTitle;

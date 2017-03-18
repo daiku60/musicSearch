@@ -9,6 +9,10 @@
 #import "AppDelegate.h"
 #import "TracksListViewController.h"
 
+#import "TracksListModels.h"
+
+#define MOCK false
+
 @interface AppDelegate ()
 
 @end
@@ -19,9 +23,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    TracksListViewController *viewController = [[TracksListViewController alloc] initWithNibName:nil bundle:nil];
+    TracksListViewController *viewController;
+#if MOCK
+    NSArray<TracksList_TrackViewModel *> *tracks = [NSArray arrayWithObjects:[[TracksList_TrackViewModel alloc] initWithTrackId: 101 andTrackTitle:@"Thriller" andArtistName:@"Michael Jackson"], [[TracksList_TrackViewModel alloc] initWithTrackId: 102 andTrackTitle:@"Smooth Criminal" andArtistName:@"Michael Jackson"], [[TracksList_TrackViewModel alloc] initWithTrackId: 103 andTrackTitle:@"Man in the Mirror" andArtistName:@"Michael Jackson"], nil];
+    TracksList_SearchViewModel *viewModel = [[TracksList_SearchViewModel alloc] initWithTracks:tracks];
+    
+    viewController = [[TracksListViewController alloc] initWithViewModel:viewModel];
+#else
+    viewController = [[TracksListViewController alloc] initWithNibName:nil bundle:nil];
+#endif
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     self.window.rootViewController = navigationController;
+    
+    
     [self.window makeKeyAndVisible];
     
     return YES;
