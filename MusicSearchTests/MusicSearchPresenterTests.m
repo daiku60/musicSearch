@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "TracksListPresenter.h"
 #import "TracksListModels.h"
+#import "TrackModel.h"
 
 #pragma mark - Spy
 
