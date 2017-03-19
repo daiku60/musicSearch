@@ -8,11 +8,28 @@
 
 #import "ITunesFetcher.h"
 
+#define BASE_URL @"https://itunes.apple.com/search"
+
+@interface ITunesFetcher ()
+
+@end
+
 @implementation ITunesFetcher
 
-- (void)fetchMusicWithCompletion:(void(^_Nullable)(NSDictionary<NSString*,NSString*> * _Nullable jsonResponse, NSError * _Nullable error))completionHandler
+- (void)fetchMusicWithTerm:(NSString *)term andCompletion:(void(^_Nullable)(NSDictionary<NSString*,NSString*> * _Nullable jsonResponse, NSError * _Nullable error))completionHandler
 {
-    //TODO: fill this (dataTask etc)
+    NSString *fullPath = [NSString stringWithFormat:@"%@/%@?term=%@&limit=10", BASE_URL, @"search", term];
+    [[[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:fullPath] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error != nil) {
+            completionHandler(nil, error);
+        }
+        
+        if (data != nil) {
+            NSError *jsonErr;
+            NSDictionary *jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonErr];
+            completionHandler(jsonResponse, nil);
+        }
+    }] resume];
 }
 
 @end

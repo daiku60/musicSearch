@@ -22,7 +22,9 @@
 
 - (void)searchTracksWithRequest:(TracksList_SearchRequest *)request {
     
-    [self.fetcher fetchMusicWithCompletion:^(NSDictionary<NSString *,NSString *> * _Nullable jsonResponse, NSError * _Nullable error) {
+    NSString *term = request.requestTerm;
+    
+    [self.fetcher fetchMusicWithTerm:term andCompletion:^(NSDictionary<NSString *,NSString *> * _Nullable jsonResponse, NSError * _Nullable error) {
         
         if (jsonResponse != nil) {
             TracksList_SearchResponse *response = [[TracksList_SearchResponse alloc] initWithDictionary:jsonResponse];

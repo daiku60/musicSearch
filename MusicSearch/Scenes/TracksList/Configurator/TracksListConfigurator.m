@@ -11,7 +11,7 @@
 #import "TracksListPresenter.h"
 #import "TracksListInteractor.h"
 #import "TracksListViewController.h"
-#import "FakeFetcher.h"
+#import "ITunesFetcher.h"
 
 @implementation TracksListConfigurator
 
@@ -34,7 +34,7 @@ static id sharedInstance;
     TracksListPresenter *presenter = [[TracksListPresenter alloc] init];
     presenter.output = (id<TracksListPresenterOutput>)viewController;
     
-    TracksListInteractor *interactor = [[TracksListInteractor alloc] initWithFetcher:[[FakeFetcher alloc] init]];
+    TracksListInteractor *interactor = [[TracksListInteractor alloc] initWithFetcher:[[ITunesFetcher alloc] init]];
     interactor.output = (id<TracksListInteractorOutput>)presenter;
     
     viewController.output = (id<TracksListViewControllerOutput>)interactor;

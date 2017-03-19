@@ -10,6 +10,6 @@
 
 @protocol MusicFetcherType <NSObject>
 
-- (void)fetchMusicWithCompletion:(void(^_Nullable)(NSDictionary<NSString*,NSString*> * _Nullable jsonResponse, NSError * _Nullable error))completionHandler;
+- (void)fetchMusicWithTerm:(NSString * _Nonnull)term andCompletion:(void(^_Nullable)(NSDictionary<NSString*,NSString*> * _Nullable jsonResponse, NSError * _Nullable error))completionHandler;
 
 @end

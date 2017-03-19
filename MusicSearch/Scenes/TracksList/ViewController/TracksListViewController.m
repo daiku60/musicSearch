@@ -140,22 +140,26 @@
 #pragma mark - Input Methods
 
 - (void)displaySearchResults:(TracksList_SearchViewModel * _Nonnull)viewModel {
-    [self hideLoading];
-    self.viewModel = viewModel;
-    [self.collectionView reloadData];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self hideLoading];
+        self.viewModel = viewModel;
+        [self.collectionView reloadData];
+    });
 }
 
 - (void)displaySearchError:(NSError * _Nonnull)error {
-    [self hideLoading];
-
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:[error.userInfo objectForKey:@"message"] preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"Retry" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        // TODO: retry search operation
-    }];
-    
-    [alertController addAction:action];
-    [self presentViewController:alertController animated:YES completion:nil];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self hideLoading];
+        
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:[error.userInfo objectForKey:@"message"] preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"Retry" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            // TODO: retry search operation
+        }];
+        
+        [alertController addAction:action];
+        [self presentViewController:alertController animated:YES completion:nil];
+    });
 }
 
 
