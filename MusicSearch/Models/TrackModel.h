@@ -20,7 +20,6 @@
 @property (nonatomic, strong, nullable) NSString *previewUrl;
 @property (nonatomic, strong, nullable) NSString *artworkUrl60;
 @property (nonatomic, strong, nullable) NSString *artworkUrl100;
-@property (nonatomic, strong, nullable) NSString *artworkUrl130;
 
 @property (nonatomic) float collectionPrice;
 @property (nonatomic, strong, nullable) NSString *releaseDate;

@@ -28,7 +28,7 @@
 #pragma mark - ViewController Lifecycle
 
 - (instancetype)initWithTrackId:(NSInteger)trackId {
-    if ((self = [super initWithNibName:@"TrackDetailViewController" bundle:[NSBundle mainBundle]])) {
+    if ((self = [super initWithNibName:@"TrackDetailViewController" bundle:nil])) {
         self.trackId = trackId;
     }
     
@@ -50,13 +50,6 @@
     
     [[TrackDetailConfigurator sharedInstance] configureWithViewController:self];
     
-//    // UI Initialization
-//    [self initAlbumImageView];
-//    [self initTrackNameLabel];
-//    
-//    // UI Layout
-//    [self layoutSubviews];
-    
     if (self.viewModel == nil) {
         // Request Track
         TrackDetail_Request *request = [[TrackDetail_Request alloc] initWithTrackId:self.trackId];
@@ -66,35 +59,6 @@
     }
 }
 
-- (void)initAlbumImageView {
-    self.albumImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-    self.albumImageView.contentMode = UIViewContentModeScaleAspectFit;
-    self.albumImageView.translatesAutoresizingMaskIntoConstraints = NO;
-}
-
-- (void)initTrackNameLabel {
-    self.trackNameLabel = [[UILabel alloc] init];
-    self.trackNameLabel.font = [UIFont systemFontOfSize:14 weight:1];
-    self.trackNameLabel.textAlignment = NSTextAlignmentCenter;
-    self.albumImageView.translatesAutoresizingMaskIntoConstraints = NO;
-}
-
-- (void)layoutSubviews {
-    [self.view addSubview:self.albumImageView];
-    [self.view addSubview:self.trackNameLabel];
-    
-    //Layout items inside view
-    NSDictionary *views = @{ @"topGuide" : self.topLayoutGuide,
-                             @"albumImageView" : self.albumImageView,
-                             @"trackNameLabel" : self.trackNameLabel };
-    
-    [self.view addConstraints:
-     [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[topGuide]-50-[albumImageView(100)]-[trackNameLabel]" options:0 metrics:nil views:views]];
-    [self.view addConstraints:
-     [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[albumImageView]|" options:0 metrics:nil views:views]];
-    [self.view addConstraints:
-     [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[trackNameLabel]|" options:0 metrics:nil views:views]];
-}
 
 #pragma mark - ViewModel inflation
 

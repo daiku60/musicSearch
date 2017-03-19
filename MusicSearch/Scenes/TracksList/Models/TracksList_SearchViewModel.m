@@ -12,6 +12,7 @@
 
 - (instancetype _Nullable)initWithTrackId:(NSInteger)trackId andTrackTitle:(NSString *)trackTitle andArtistName:(NSString *)artistName {
     if ((self = [super init])) {
+        self.trackId = trackId;
         self.trackTitle = trackTitle;
         self.artistName = artistName;
     }
