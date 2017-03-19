@@ -32,7 +32,7 @@
     
     NSMutableArray *mutableArray = [NSMutableArray array];
     for (TrackModel *trackModel in response.resultsArray) {
-        TracksList_TrackViewModel *trackVM = [[TracksList_TrackViewModel alloc] initWithTrackId:trackModel.trackId andTrackTitle:trackModel.trackName andArtistName:trackModel.artistName];
+        TracksList_TrackViewModel *trackVM = [[TracksList_TrackViewModel alloc] initWithTrackId:trackModel.trackId andTrackTitle:trackModel.trackName andArtistName:trackModel.artistName andImagePath:trackModel.artworkUrl60];
         [mutableArray addObject:trackVM];
     }
     

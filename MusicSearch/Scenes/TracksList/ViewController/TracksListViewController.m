@@ -58,7 +58,7 @@
     self.collectionView.backgroundColor = [UIColor whiteColor];
     
     //Register Cell
-    [self.collectionView registerClass:[TrackCell class] forCellWithReuseIdentifier:[TrackCell reuseIdentifier]];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"TrackCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:[TrackCell reuseIdentifier]];
     [self.collectionView registerClass:[EmptyCell class] forCellWithReuseIdentifier:[EmptyCell reuseIdentifier]];
     
     //Delegate & DataSource Hooks

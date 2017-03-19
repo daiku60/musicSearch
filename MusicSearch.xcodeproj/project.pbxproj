@@ -44,6 +44,7 @@
 		67F833D51E7E8A0100ABB159 /* TrackDetail_Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F833D41E7E8A0100ABB159 /* TrackDetail_Response.m */; };
 		67F833D81E7EA2B200ABB159 /* TrackDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67F833D71E7EA2B200ABB159 /* TrackDetailViewController.xib */; };
 		67F833DF1E7EAB2700ABB159 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F833DE1E7EAB2700ABB159 /* AVFoundation.framework */; };
+		67F833E41E7F0BDA00ABB159 /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67F833E21E7F0BDA00ABB159 /* TrackCell.xib */; };
 		D4138578A2D422CF988CD00B /* libPods-MusicSearch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5CABEE7A5941DE1D870FB68 /* libPods-MusicSearch.a */; };
 /* End PBXBuildFile section */
 
@@ -128,6 +129,7 @@
 		67F833D61E7E8A3A00ABB159 /* TrackDetailModels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TrackDetailModels.h; path = Scenes/TrackDetail/Models/TrackDetailModels.h; sourceTree = "<group>"; };
 		67F833D71E7EA2B200ABB159 /* TrackDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TrackDetailViewController.xib; path = Scenes/TrackDetail/ViewController/TrackDetailViewController.xib; sourceTree = "<group>"; };
 		67F833DE1E7EAB2700ABB159 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		67F833E21E7F0BDA00ABB159 /* TrackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TrackCell.xib; path = Scenes/TracksList/ViewController/Components/TrackCell.xib; sourceTree = "<group>"; };
 		8D37C5E0D317B48B662F05DA /* Pods-MusicSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicSearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicSearchTests/Pods-MusicSearchTests.release.xcconfig"; sourceTree = "<group>"; };
 		C18CE488D17D16584D06A029 /* Pods-MusicSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicSearch/Pods-MusicSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		E5CABEE7A5941DE1D870FB68 /* libPods-MusicSearch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicSearch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -318,6 +320,7 @@
 			children = (
 				67F218941E7B5C8C00FB2AFF /* TrackCell.h */,
 				67F218951E7B5C8C00FB2AFF /* TrackCell.m */,
+				67F833E21E7F0BDA00ABB159 /* TrackCell.xib */,
 				67F833B31E7DFCF200ABB159 /* EmptyCell.h */,
 				67F833B41E7DFCF200ABB159 /* EmptyCell.m */,
 			);
@@ -539,6 +542,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67F833E41E7F0BDA00ABB159 /* TrackCell.xib in Resources */,
 				67D05B261E7B47E300153870 /* LaunchScreen.storyboard in Resources */,
 				679F5FC71E7C7BA00048516D /* TrackListMock.json in Resources */,
 				67F833D81E7EA2B200ABB159 /* TrackDetailViewController.xib in Resources */,

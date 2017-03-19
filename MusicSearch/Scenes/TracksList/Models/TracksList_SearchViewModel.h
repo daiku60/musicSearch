@@ -13,8 +13,9 @@
 @property(nonatomic) NSInteger trackId;
 @property(nonatomic, strong, nonnull) NSString *trackTitle;
 @property(nonatomic, strong, nonnull) NSString *artistName;
+@property(nonatomic, strong, nullable) NSString *imagePath;
 
-- (instancetype _Nullable)initWithTrackId:(NSInteger)trackId andTrackTitle:(NSString * _Nonnull)trackTitle andArtistName:(NSString * _Nonnull)artistName;
+- (instancetype _Nullable)initWithTrackId:(NSInteger)trackId andTrackTitle:(NSString * _Nonnull)trackTitle andArtistName:(NSString * _Nonnull)artistName andImagePath:(NSString * _Nonnull)imagePath;
 
 @end
 
