@@ -10,10 +10,11 @@
 
 @interface TrackDetail_ViewModel : NSObject
 
+@property (nonatomic) NSInteger trackId;
 @property (nonatomic, strong, nonnull) NSString *name;
 @property (nonatomic, strong, nonnull) NSString *audioPath;
 @property (nonatomic, strong, nonnull) NSString *imagePath;
 
-- (instancetype _Nonnull)initWithName:(NSString * _Nonnull)name andAudioPath:(NSString * _Nonnull)audioPath andImagePath:(NSString * _Nonnull)imagePath;
+- (instancetype _Nonnull)initWithId:(NSInteger)trackId andName:(NSString * _Nonnull)name andAudioPath:(NSString * _Nonnull)audioPath andImagePath:(NSString * _Nonnull)imagePath;
 
 @end

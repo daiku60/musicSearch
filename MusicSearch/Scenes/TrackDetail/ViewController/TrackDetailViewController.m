@@ -95,4 +95,8 @@
     });
 }
 
+- (IBAction)nextClicked:(id)sender {
+    [self.output retrieveNextTrackToTrackId:self.viewModel.trackId];
+}
+
 @end

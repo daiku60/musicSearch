@@ -15,6 +15,7 @@
 
 @protocol TrackDetailInteractorInput <NSObject>
 - (void)retrieveTrackWithRequest:(TrackDetail_Request * _Nonnull)request;
+- (void)retrieveNextTrackToTrackId:(NSInteger)trackId;
 @end
 
 @protocol TrackDetailInteractorOutput <NSObject>

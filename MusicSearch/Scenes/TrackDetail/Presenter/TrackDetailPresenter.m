@@ -15,7 +15,7 @@
 - (void)presentTrackWithResponse:(TrackDetail_Response * _Nonnull)response {
     // Transform response as it came from input (interactor), i.e. model to a viewModel
     TrackModel *model = response.trackModel;
-    TrackDetail_ViewModel *viewModel = [[TrackDetail_ViewModel alloc] initWithName:model.trackName andAudioPath:model.previewUrl andImagePath:model.artworkUrl100];
+    TrackDetail_ViewModel *viewModel = [[TrackDetail_ViewModel alloc] initWithId: model.trackId andName:model.trackName andAudioPath:model.previewUrl andImagePath:model.artworkUrl100];
     
     [self.output displayTrackResult:viewModel];
 }

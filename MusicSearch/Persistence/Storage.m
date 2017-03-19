@@ -10,7 +10,7 @@
 #import "TrackModel.h"
 
 @interface Storage ()
-@property (nonatomic, strong, nonnull) NSMutableDictionary<NSString *, TrackModel *> *models;
+@property (nonatomic, strong, nonnull) NSMutableArray<TrackModel *> *trackModels;
 @end
 
 @implementation Storage
@@ -22,17 +22,37 @@ static Storage *sharedInstance;
     static dispatch_once_t once;
     dispatch_once(&once, ^{
         sharedInstance = [[self alloc] init];
-        sharedInstance.models = [NSMutableDictionary dictionary];
+        sharedInstance.trackModels = [NSMutableArray array];
     });
     return sharedInstance;
 }
 
 - (void)storeTrackModel:(TrackModel * _Nonnull)trackModel {
-    [self.models setObject:trackModel forKey:[NSString stringWithFormat:@"%ld,",(long)trackModel.trackId]];
+    [self.trackModels filterUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id  _Nullable evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
+        TrackModel *model = (TrackModel *)evaluatedObject;
+        return model.trackId != trackModel.trackId;
+    }]];
+    
+    [self.trackModels addObject:trackModel];
 }
 
 - (TrackModel * _Nullable)trackModelWithId:(NSInteger)trackId {
-    return [self.models objectForKey:[NSString stringWithFormat:@"%ld,",(long)trackId]];
+    return [[self.trackModels filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id  _Nullable evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
+        TrackModel *model = (TrackModel *)evaluatedObject;
+        return model.trackId == trackId;
+    }]] firstObject];
+}
+
+- (TrackModel * _Nullable)nextTrackModelWithId:(NSInteger)trackId {
+    TrackModel *currentTrackModel = [[self.trackModels filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id  _Nullable evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
+        TrackModel *model = (TrackModel *)evaluatedObject;
+        return model.trackId == trackId;
+    }]] firstObject];
+    
+    NSUInteger idx = [self.trackModels indexOfObject:currentTrackModel];
+    NSUInteger nextIdx = (idx + 1) % self.trackModels.count;
+    
+    return [self.trackModels objectAtIndex:nextIdx];
 }
 
 

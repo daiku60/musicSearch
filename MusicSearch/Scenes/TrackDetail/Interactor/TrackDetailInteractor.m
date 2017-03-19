@@ -26,4 +26,10 @@
     }
 }
 
+- (void)retrieveNextTrackToTrackId:(NSInteger)trackId {
+    TrackModel *trackModel = [[Storage sharedInstance] nextTrackModelWithId:trackId];
+    TrackDetail_Request *request = [[TrackDetail_Request alloc] initWithTrackId:trackModel.trackId];
+    [self retrieveTrackWithRequest:request];
+}
+
 @end

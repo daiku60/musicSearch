@@ -22,6 +22,7 @@
 @protocol TrackDetailViewControllerOutput <NSObject>
 //Place here methods that will be called in the output (interactor)
 - (void)retrieveTrackWithRequest:(TrackDetail_Request * _Nonnull)request;
+- (void)retrieveNextTrackToTrackId:(NSInteger)trackId;
 @end
 
 @interface TrackDetailViewController : UIViewController <TrackDetailViewControllerInput>

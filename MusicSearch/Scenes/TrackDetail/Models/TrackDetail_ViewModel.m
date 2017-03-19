@@ -10,9 +10,10 @@
 
 @implementation TrackDetail_ViewModel
 
-- (instancetype _Nonnull)initWithName:(NSString * _Nonnull)name andAudioPath:(NSString * _Nonnull)audioPath andImagePath:(NSString * _Nonnull)imagePath {
+- (instancetype _Nonnull)initWithId:(NSInteger)trackId andName:(NSString * _Nonnull)name andAudioPath:(NSString * _Nonnull)audioPath andImagePath:(NSString * _Nonnull)imagePath {
     
     if ((self = [super init])) {
+        self.trackId = trackId;
         self.name = name;
         self.audioPath = audioPath;
         self.imagePath = imagePath;

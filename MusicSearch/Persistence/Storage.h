@@ -16,5 +16,6 @@
 
 - (void)storeTrackModel:(TrackModel * _Nonnull)trackModel;
 - (TrackModel * _Nullable)trackModelWithId:(NSInteger)trackId;
+- (TrackModel * _Nullable)nextTrackModelWithId:(NSInteger)trackId;
 
 @end

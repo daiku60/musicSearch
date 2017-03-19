@@ -34,11 +34,20 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nr0-a4-T2C">
+                    <rect key="frame" x="315" y="287" width="32" height="30"/>
+                    <state key="normal" title="Next"/>
+                    <connections>
+                        <action selector="nextClicked:" destination="-1" eventType="touchUpInside" id="hTI-1V-h9U"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="CVm-Uh-uwV" firstAttribute="top" secondItem="aUW-HG-jcF" secondAttribute="bottom" constant="32" id="3lM-d9-1h2"/>
                 <constraint firstItem="CVm-Uh-uwV" firstAttribute="centerX" secondItem="Llr-0G-Ljp" secondAttribute="centerX" id="Odi-dr-4Nr"/>
+                <constraint firstItem="nr0-a4-T2C" firstAttribute="top" secondItem="CVm-Uh-uwV" secondAttribute="bottom" constant="28" id="PhC-et-X6P"/>
+                <constraint firstAttribute="trailing" secondItem="nr0-a4-T2C" secondAttribute="trailing" constant="28" id="sdC-2U-bwu"/>
                 <constraint firstItem="aUW-HG-jcF" firstAttribute="top" secondItem="Llr-0G-Ljp" secondAttribute="top" constant="106" id="umG-80-OBj"/>
                 <constraint firstItem="aUW-HG-jcF" firstAttribute="centerX" secondItem="Llr-0G-Ljp" secondAttribute="centerX" id="wej-lf-7lK"/>
             </constraints>
