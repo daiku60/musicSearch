@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrackDetailViewController">
+            <connections>
+                <outlet property="albumImageView" destination="aUW-HG-jcF" id="oWQ-yN-Heb"/>
+                <outlet property="trackNameLabel" destination="CVm-Uh-uwV" id="7qG-3e-alf"/>
+                <outlet property="view" destination="Llr-0G-Ljp" id="uYo-4H-63B"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Llr-0G-Ljp">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aUW-HG-jcF">
+                    <rect key="frame" x="137" y="106" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="aYc-yT-Tyy"/>
+                        <constraint firstAttribute="width" constant="100" id="vCh-kt-Q6E"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVm-Uh-uwV">
+                    <rect key="frame" x="147.5" y="238" width="80.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="CVm-Uh-uwV" firstAttribute="top" secondItem="aUW-HG-jcF" secondAttribute="bottom" constant="32" id="3lM-d9-1h2"/>
+                <constraint firstItem="CVm-Uh-uwV" firstAttribute="centerX" secondItem="Llr-0G-Ljp" secondAttribute="centerX" id="Odi-dr-4Nr"/>
+                <constraint firstItem="aUW-HG-jcF" firstAttribute="top" secondItem="Llr-0G-Ljp" secondAttribute="top" constant="106" id="umG-80-OBj"/>
+                <constraint firstItem="aUW-HG-jcF" firstAttribute="centerX" secondItem="Llr-0G-Ljp" secondAttribute="centerX" id="wej-lf-7lK"/>
+            </constraints>
+            <point key="canvasLocation" x="65" y="-621"/>
+        </view>
+    </objects>
+</document>

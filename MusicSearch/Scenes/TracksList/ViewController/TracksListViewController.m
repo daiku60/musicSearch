@@ -132,6 +132,10 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self isEmpty]) {
+        return;
+    }
+    
     TracksList_TrackViewModel *trackVM = [self.viewModel.tracksArray objectAtIndex:indexPath.item];
     [self.router navigateToTrackDetailWithId: trackVM.trackId];
 }

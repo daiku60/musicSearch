@@ -25,6 +25,6 @@
 
 @interface TracksListPresenter : NSObject <TracksListPresenterInput>
 
-@property (nonatomic, strong) id<TracksListPresenterOutput> _Nonnull output;
+@property (nonatomic, weak, nullable) id<TracksListPresenterOutput> output;
 
 @end

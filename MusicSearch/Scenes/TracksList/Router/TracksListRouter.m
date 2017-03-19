@@ -7,11 +7,13 @@
 //
 
 #import "TracksListRouter.h"
+#import "TrackDetailViewController.h"
 
 @implementation TracksListRouter
 
 - (void)navigateToTrackDetailWithId:(NSInteger)trackId {
-    //TODO implement this
+    TrackDetailViewController *detailVC = [[TrackDetailViewController alloc] initWithTrackId:trackId];
+    [self.viewController.navigationController pushViewController:detailVC animated:YES];
 }
 
 @end

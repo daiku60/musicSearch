@@ -8,6 +8,8 @@
 
 #import "TracksListInteractor.h"
 #import "TracksListModels.h"
+#import "TrackModel.h"
+#import "Storage.h"
 
 @implementation TracksListInteractor
 
@@ -29,6 +31,11 @@
         if (jsonResponse != nil) {
             TracksList_SearchResponse *response = [[TracksList_SearchResponse alloc] initWithDictionary:jsonResponse];
             [self.output presentSearchWithResponse:response];
+            
+            for (TrackModel *model in response.resultsArray) {
+                [[Storage sharedInstance] storeTrackModel:model];
+            }
+            
         } else {
             [self.output presentSearchWithError:error];
         }

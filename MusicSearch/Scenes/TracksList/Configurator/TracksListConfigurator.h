@@ -12,7 +12,7 @@
 
 @interface TracksListConfigurator : NSObject
 
-+ (instancetype)sharedInstance;
-- (void)configureWithViewController:(TracksListViewController *)viewController;
++ (instancetype _Nonnull)sharedInstance;
+- (void)configureWithViewController:(TracksListViewController * _Nonnull)viewController;
 
 @end
