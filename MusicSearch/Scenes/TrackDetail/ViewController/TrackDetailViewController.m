@@ -12,6 +12,8 @@
 
 #import <SDWebImage/UIImageView+WebCache.h>
 
+#import <AVFoundation/AVPlayer.h>
+
 @interface TrackDetailViewController ()
 
 @property (nonatomic, strong) IBOutlet UIImageView *albumImageView;
@@ -20,6 +22,8 @@
 @property (nonatomic) NSInteger trackId;
 
 @property (nonatomic, strong) TrackDetail_ViewModel *viewModel;
+
+@property (nonatomic, strong) AVPlayer *player;
 
 @end
 
@@ -63,12 +67,18 @@
 #pragma mark - ViewModel inflation
 
 - (void)configureForViewModel:(TrackDetail_ViewModel *)viewModel {
+    self.viewModel = viewModel;
+    
     NSURL *url = [NSURL URLWithString:viewModel.imagePath];
     if (url != nil) {
         [self.albumImageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"placeholder"]];
     }
     
     self.trackNameLabel.text = viewModel.name;
+    
+    NSURL *trackURL = [NSURL URLWithString:viewModel.audioPath];
+    self.player = [AVPlayer playerWithURL:trackURL];
+    [self.player play];
 }
 
 #pragma mark - Input Methods
